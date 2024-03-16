@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors" />
+    <title>Selectors</title>
+    <!-- 
+        1. Inline 
+        2. Internal
+        3. External
+
+        selector {
+            propertyName: propertyValue;
+        }
+
+        Universal 
+        * {
+            propertyName: propertyValue;
+        }
+
+        Type
+        tagName {
+            propertyName: propertyValue;
+        }
+
+        ID
+        #idValue {
+            propertyName: propertyValue;
+        }
+
+        Combinators
+        baseSelector selector {
+             propertyName: propertyValue;
+        }
+        1. Descendent Selector
+         baseSelector selector {
+             propertyName: propertyValue;
+        }
+        2. Child Selector
+         baseSelector > selector {
+             propertyName: propertyValue;
+        }
+     -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* * {
+        color: green;
+      } */
+      /* h1,
+      p {
+        color: green;
+        color: red;
+      } */
+      h1 {
+        color: red;
+      }
+
+      #para,
+      #para-1 {
+        color: white;
+        border: 2px solid red;
+        background: green;
+        line-height: 20px;
+        /* padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        padding-left: 10px; */
+        /* padding: 20px 10px 20px 10px; */
+        /* padding: 20px 10px; */
+        padding: 20px;
+        width: 40%;
+        display: inline-block;
+        margin-right: 20px;
+      }
+      img {
+        height: 250px;
+        width: 100%;
+        border-radius: 10px;
+      }
+      /* .product {
+        border: 2px solid red;
+        margin: 0px 10px 10px 0px;
+        width: 33%;
+        display: inline-block;
+      }
+
+      .product > h2 {
+        text-align: center;
+      } */
+
+      #products {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .product {
+        flex-grow: 1;
+        flex-basis: 20%;
+        max-width: 25%;
+
+        border: 2px solid red;
+        border-radius: 20px;
+        margin: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        line-height: 35px;
+      }
+
+      .product > h2 {
+        text-align: center;
+      }
+
+      .product button {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 10px;
+        font-size: 15px;
+      }
+
+      .product .cart {
+        width: 90%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <h2>Heading - 2</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+      quaerat similique laudantium veritatis esse culpa asperiores vel
+      perferendis aspernatur cumque!
+    </p>
+    <h1 id="unique">Another Heading</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, itaque!
+    </p>
+    <h1>Another Heading - 2</h1>
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, itaque!
+    </p>
+
+    <p id="para-1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, itaque!
+    </p>
+    <div id="products">
+      <div class="product">
+        <h2>Product - 1</h2>
+        <div class="product-image">
+          <img src="./images/image-one.jpg" alt="image-1" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 1</h2>
+          <p>Price - 1</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <h2>Product - 2</h2>
+        <div class="product-image">
+          <img src="./images/image-two.jpg" alt="image-2" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 2</h2>
+          <p>Price - 3</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <h2>Product - 3</h2>
+        <div class="product-image">
+          <img src="./images/image-three.jpg" alt="image-3" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 3</h2>
+          <p>Price - 3</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <h2>Product - 1</h2>
+        <div class="product-image">
+          <img src="./images/image-one.jpg" alt="image-1" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 1</h2>
+          <p>Price - 1</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <h2>Product - 2</h2>
+        <div class="product-image">
+          <img src="./images/image-two.jpg" alt="image-2" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 2</h2>
+          <p>Price - 3</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <h2>Product - 3</h2>
+        <div class="product-image">
+          <img src="./images/image-three.jpg" alt="image-3" />
+        </div>
+        <div class="product-details">
+          <h2>Title - 3</h2>
+          <p>Price - 3</p>
+        </div>
+        <div class="cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

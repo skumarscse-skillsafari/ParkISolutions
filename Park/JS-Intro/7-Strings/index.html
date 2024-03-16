@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h2>Strings</h2>
+
+    <script>
+      // Strings – immutable, Search – indexOf, includes,
+      // startsWith, endsWith, Sub-string – slice (positive and negative index),
+      // substring (interchange – start and end),
+      // substr (positive and negative index, length), localeCompare,
+      // trim, repeat
+
+      let name = "Park infotech solutions";
+      // indexOf, includes, startsWith, endsWith =>
+      // console.log(name.indexOf("z", 15)); // 1
+
+      // console.log(name.includes("park")); // false
+
+      //   console.log(name.startsWith("Park")); // true
+
+      // Sub-string – slice (positive and negative index),
+      //   console.log(name.slice(5));
+      //   console.log(name.slice(6, 8));
+      //   console.log(name.slice(-5, -2));
+      // substring (interchange – start and end),
+      console.log(name.substring(1, 6)); // ark i
+      console.log(name.substring(6, 1)); // ark i
+      // substr (positive and negative index, length)
+      console.log(name.substr(0, 5)); // Park
+      console.log(name.substr(-6, 4)); // utio
+
+      //   console.log(name.localeCompare("Park"));
+
+      console.log("          Demo     Demo     ".trim());
+    </script>
+  </body>
+</html>

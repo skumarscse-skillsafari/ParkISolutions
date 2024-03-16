@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>Arrays</h2>
+
+    <script>
+      // Arrays – index, length, last element, pop, push, shift, unshift,
+      // performance, loops, multi-dimensional,
+      // splice (positive and negative index)-  insert, remove, replace,
+      // slice, concat, forEach,
+      // Search – indexOf, lastIndexOf, includes, find, findIndex, findLastIndex, filter,
+      // Transform – map, sort, reverse, split, join, reduce
+
+      let arrayEle = ["John", "Jack"];
+      //   arrayEle[2] = "Mary";
+      // arrayEle.pop();
+      // arrayEle.push("Jack", "Mary");
+      // arrayEle.shift();
+      arrayEle.unshift("Mary", "Robert");
+      console.log(arrayEle);
+      //   for (const ele of arrayEle) {
+      //     console.log(ele);
+      //   }
+
+      //   let multiArr = [
+      //     [1, 2, 3], // 0
+      //     [4, 5, 6], // 1
+      //     [7, 8, 9], // 2
+      //   ];
+      //   console.log(multiArr[1][1]); // [4, 5, 6]
+      //   console.log(multiArr[2][2]);
+
+      let subjectsArr = ["English", "Maths", "Physics", "Chemisty"];
+      //   subjectsArr.splice(2);
+      //   subjectsArr.splice(1, 2, "Computer");
+      //   subjectsArr.splice(1, 0, "Computer");
+      //   subjectsArr.splice(4, 0, "Computer");
+      // console.log(subjectsArr.concat(["Computer"]));
+
+      // forEach()
+
+      /*
+        arr.forEach(function (element, index, array) {
+            // 
+        })
+      */
+
+      //   subjectsArr.forEach(function (subject, index, arr) {
+      //     console.log(subject, index, arr);
+      //   });
+
+      subjectsArr.forEach((subject) => console.log(subject));
+    </script>
+  </body>
+</html>

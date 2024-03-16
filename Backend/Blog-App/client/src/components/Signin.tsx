@@ -2,8 +2,11 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import baseURL from "../api/api";
 
 const Signin = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -27,9 +30,11 @@ const Signin = () => {
       alert("All the fields are mandatory");
     } else {
       axios
-        .post("http://localhost:5000/api/v1/users/signin", user)
+        .post(`${baseURL}/users/signin`, user)
         .then((res) => {
           alert(res.data.message);
+          navigate("/", { replace: true });
+          window.location.reload();
           localStorage.setItem("token", res.data.token);
         })
         .catch((error) => console.log(error.response.data.message));

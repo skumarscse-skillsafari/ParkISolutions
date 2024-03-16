@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Type Conversion" />
+    <title>Type Conversion</title>
+  </head>
+  <body>
+    <h2>Type Conversion</h2>
+
+    <script>
+      // Type Conversion
+      /*
+            Multi-line comment
+            Interaction methods
+            1. alert()
+            2. prompt()
+            3. confirm()
+        */
+      //   let username = prompt("Enter username?", "PGHR");
+      //   console.log(username);
+      // Number() => Constructor function
+      // unary plus "+"
+      //   let numOne = prompt("Enter number - 1");
+      //   let numTwo = prompt("Enter number - 2");
+      //   console.log(Number(numOne) + Number(numTwo));
+      //   console.log(+numOne + +numTwo);
+
+      //   let isAdmin = confirm("isAdmin?");
+      //   console.log(isAdmin);
+
+      // String Conversion
+      // String("string")
+      //   let output = false;
+      //   console.log(String(output));
+      //   console.log(String("        hello    "));
+
+      // Numeric
+      // Number()
+      //   console.log("23" + "10"); // 2310
+      //   console.log("23" / "10"); // 2310
+      //   console.log("23" * "10"); // 230
+      //   console.log("23" - "10"); // 13
+
+      //   console.log(Number("hello")); // NaN
+      //   console.log(Number("     123        ")); // 123
+      //   console.log(Number(true)); // 1
+      //   console.log(Number("     true       ")); // NaN
+
+      // Boolean => false, 0, null, undefined, NaN, ""
+      //   console.log(Boolean(1));
+      //   console.log(Boolean("1"));
+      //   console.log(Boolean(0));
+      //   console.log(Boolean("0"));
+      //   console.log(Boolean(""));
+      //   console.log(Boolean(" "));
+      //   console.log(Boolean("Hello"));
+      //   console.log(Boolean(123));
+
+      // parseInt()
+      // parseFloat()
+
+      //   console.log(parseInt("123abc")); // 123
+      //   console.log(parseInt("abc123")); // NaN
+      //   console.log(parseFloat("12.3abc")); // 12.3
+      //   console.log(parseFloat("abc1.3")); // NaN
+
+      // Math
+      // toFixed(), Math – floor, ceil, round, trunc, random, max, pow,
+      // Number.isNaN, Number.isFinite
+
+      //   console.log(+(12.3456).toFixed(2));
+      // Math
+      console.log(Math.floor(12.64)); // round down
+      console.log(Math.ceil(12.24)); // round up
+      console.log(Math.round(12.34)); // > = .5 => round up
+      console.log(Math.round(12.44)); // > = .5 => round up
+      console.log(Math.round(12.54)); // > = .5 => round up
+      console.log(Math.trunc(12.34));
+      console.log(Math.trunc(12.54));
+      console.log(Math.floor(Math.random() * 100));
+      console.log(Math.random().toString(32).split(".")[1]);
+      console.log(Math.max(12, 43, 56, 12.3));
+      console.log(Math.min(12, 0, -2, 43, 56, -12.3));
+      console.log(Math.pow(10, 2));
+      console.log(isNaN("hello"));
+      console.log(isFinite("hello"));
+    </script>
+  </body>
+</html>

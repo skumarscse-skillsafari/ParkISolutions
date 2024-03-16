@@ -2,12 +2,13 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import baseURL from "../api/api";
 
 const Post = ({ post }: any) => {
   const deletePost = (e: any) => {
     e.preventDefault();
     axios
-      .delete(`http://localhost:5000/api/v1/posts/${e.target.id}`)
+      .delete(`${baseURL}/posts/${e.target.id}`)
       .then((res) => alert(res.data.message))
       .catch((error) => console.log(error));
   };
@@ -25,6 +26,10 @@ const Post = ({ post }: any) => {
           <Button variant="danger" onClick={deletePost} id={post._id}>
             Delete
           </Button>
+          {"   "}
+          <Link to={`/post/${post._id}`} className="btn btn-success">
+            View
+          </Link>
         </Card.Body>
       </Card>
     </div>

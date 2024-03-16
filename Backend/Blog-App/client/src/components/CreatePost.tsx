@@ -5,6 +5,7 @@ import FileBase64 from "react-file-base64";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import baseURL from "../api/api";
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const CreatePost = () => {
     const userId = jwt.id;
     // console.log(userId);
     axios
-      .post(`http://localhost:5000/api/v1/posts/${userId}`, post, {
+      .post(`${baseURL}/posts/${userId}`, post, {
         headers: {
           "x-access-token": JSON.parse(token),
         },

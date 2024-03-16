@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Statements</title>
+  </head>
+  <body>
+    <!-- 
+        Conditional statements – if, else, else if, conditional operator
+        Switch statement – case-sensitive, grouping
+     -->
+    <script>
+      // if
+      /*
+        if(condition) {
+
+        }
+      */
+      // false => 0, null, undefined, ""
+      // console.log("----Before----");
+      // if (true) {
+      //   console.log("Inside Block");
+      // }
+      // console.log("----After----");
+
+      // let number = prompt("Enter a number");
+      // if (!(+number % 2)) {
+      //   // 22 % 2 => !0 => true
+      //   // 11 % 2 === 1 // 1 === 1 => true
+      //   console.log("Even");
+      // } else {
+      //   console.log("Odd");
+      // }
+
+      /*
+        if (condition-1) { // true => execute block - 1 // false => check condition - 2
+            // block - 1
+        } else if (condition -2) { // true => execute block - 2 // false => check condition - 3
+            // block - 2
+        } else if (condition - 3) { // true => execute block - 3 // false => check condition - 3
+            // block - 3
+        } else { // if all above condition "false", execute else block
+            // else block
+        }
+      */
+
+      // Greatest of 3 numbers
+      //
+      // let numOne = prompt("Enter number 1");
+      // let numTwo = prompt("Enter number 2");
+      // let numThree = prompt("Enter number 3");
+      // console.log(numOne, numTwo, numThree);
+      // if (numOne > numTwo && numOne > numThree) {
+      //   console.log("Num-1 is biggest " + numOne);
+      // } else if (numTwo > numOne && numTwo > numThree) {
+      //   console.log("Num 2 is biggest " + numTwo);
+      // } else {
+      //   console.log("Num 3 is biggest " + numThree);
+      // }
+
+      // Switch
+      /*
+        switch(value) {
+          case 1:
+            // statement
+            // break;
+          case 2:
+            // statement
+            // break; 
+          case 3:
+            // statement
+            // break; 
+          default:  
+        }
+      */
+      // const number = prompt("Enter number between 1 and 3");
+      // switch (+number) {
+      //   case 1: // "1" === 1
+      //     console.log("1");
+      //     break;
+      //   case 2:
+      //     console.log("2");
+      //     break;
+      //   case 3:
+      //     console.log("3");
+      //     break;
+      //   default:
+      //     console.log("Enter a valid number");
+      //     break;
+      // }
+
+      /*
+        do... while
+        while
+        for
+
+        // initialisation
+        // condition
+        // increment/decrement
+
+        do...while
+        initialization; // let i = 1
+        do {
+          // statement
+          // increment/decrement // i++ => i = i + 1
+        } while (condition) // i <= 10
+      */
+      // let i = 10;
+      // do {
+      //   // if (i == 5) break;
+
+      //   if (i == 5) {
+      //     // 5 == 5
+      //     i--;
+      //     continue;
+      //   }
+      //   console.log(i); // 5
+      //   i--; // 6
+      // } while (i >= 1); //
+
+      /*
+      initialisation
+      while (condition) {
+        // statement
+        // incremnet/decrement
+      }
+      */
+
+      // let num = 1;
+      // while (num <= 5) {
+      //   console.log(num);
+      //   num++;
+      // }
+
+      // for (let num = 1; num <= 5; num++) {
+      //   console.log(num);
+      // }
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

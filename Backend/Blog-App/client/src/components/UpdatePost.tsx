@@ -5,12 +5,13 @@ import FileBase64 from "react-file-base64";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import baseURL from "../api/api";
 
 const UpdatePost = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/posts/${id}`)
+      .get(`${baseURL}/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => console.log(error));
   }, []);
@@ -39,7 +40,7 @@ const UpdatePost = () => {
     const userId = jwt.id;
     console.log(userId);
     axios
-      .put(`http://localhost:5000/api/v1/posts/${id}`, post, {
+      .put(`${baseURL}/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },

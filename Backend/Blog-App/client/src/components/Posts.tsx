@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "./Post";
+import baseURL from "../api/api";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/posts")
+      .get(`${baseURL}/posts`)
       .then((res) => setPosts(res.data.data))
       .catch((error) => alert(error.response.data.message));
   }, [posts]);

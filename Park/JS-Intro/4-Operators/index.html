@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <!-- 
+        Operators – Basic – unary, binary, arithmetic, precedence, assignment, increment/decrement, Comparison – number, string, equality, strict equality
+        Logical operators – OR (truthy & short-circuit), AND (falsy & short-circuit), NOT
+        Nullish coalescing operator
+     -->
+
+    <script>
+      // Arithmetic - +, - *, / %
+      // Modulo
+      //   console.log(10 / 3);
+      //   console.log(21 % 4);
+
+      //   let expression = 1 + 2 / 3 - (4 % 5); // 1 + 2 / 3 - 4 // 1 + 0.66 - 4 // 1.66 - 4 // -2
+      //   console.log(expression);
+
+      // increment and decrement
+      // pre/post-increment and decrement
+      // ++a, --a and a++, a--
+      //   let a = 10;
+      //   console.log(++a); // 11
+      //   console.log(a++); // 10
+      //   console.log(++a); // 12
+      //   console.log(--a); // 9
+
+      // Comparision = >, <, >=, <=, ==, !=, ===, !==
+      // Result => Boolean
+      //   let b = 20;
+      //   let c = 3;
+      //   console.log(b > c); // true
+      //   console.log(b < c); // false
+      //   console.log(3 <= 4); // true
+      //   console.log(3 == 3); // true
+      //   console.log(3 === "3"); // false
+      //   console.log(3 != "3"); // false
+
+      //   console.log("abc" > "ABC"); // 97 > 65 // true
+      //   console.log("Abc" > "ABC"); // 98 > 66 // true
+
+      // Logical => OR, AND, NOT
+      // OR and AND => Binary operator
+      // NOT => Unary
+      // OR
+      // operand-1      operand-2       result
+      // true           true            true
+      // true           false           true
+      // false          true            true
+      // false          false           false
+
+      console.log(3 > 4 || 5 < 6); // false || true => true
+
+      // First truthy value
+      // Evaluate from left to right and looks for first truthy value
+      // truthy => return its original value
+      // if no truthy value found "return last operand actual value"
+      console.log(2 > 3 || 4 > 7 || "" || null || undefined);
+      //          false || false || false || false || false
+
+      // short-circuiting
+      // if operand-1 "true" return its actual value
+      // if operand-1 "false" return "operand-2" actual value
+      console.log("" || 123);
+
+      // AND
+      // operand-1      operand-2       result
+      // true           true            true
+      // true           false           false
+      // false          true            false
+      // false          false           false
+
+      console.log(2 > 3 && 3 < 3); // false && false => false
+
+      // First falsy value
+      // Evaluate from left to right and looks for first falsy value
+      // falsy => return its original value
+      // if no falsy value found "return last operand actual value"
+      console.log(2 < 3 && 4 < 7 && " " && 123 && undefined);
+      //        true    && true  && true && true
+
+      // short-circuiting
+      // if operand-1 "false" return its actual value
+      // if operand-1 "true" return "operand-2" actual value
+      //   console.log(" " && 123);
+
+      //   let username = "Park" || "Anonymous";
+      //   console.log(username);
+
+      // NOT
+      // true or false
+      // !true => false
+      // !false => true
+      //   console.log(!" ");
+
+      // Nullish coalescing operator
+      // used to check the variable defined with value
+      // if "operand-1" defined, return operand-1 actual value
+      // if "operand-1" not defined, return operand-2 actual value
+      //   let a;
+      //   let b = "Hello";
+      //   console.log(a ?? b);
+
+      //   console.log(a || b); // "Hello"
+      //   console.log(a ?? b); // "Hello"
+    </script>
+  </body>
+</html>

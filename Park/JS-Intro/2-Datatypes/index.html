@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datatypes</title>
+  </head>
+  <body>
+    <h2>Datatypes</h2>
+
+    <script>
+      // Datatypes
+      // 1. Primitive - string, bigint, number, boolean, null, undefined, NaN, symbol
+      // 2. Non-primitive - object, array, functions
+
+      // String => alphabets or alpha-numeric characters
+      // represented => single, double quote, backticks
+      //   let firstName = "John";
+      //   let lastName = "Jack";
+      //   let city = `chennai`;
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(city);
+
+      // concatenation => "+"
+      //   let fullName = firstName + " " + lastName; // JohnJack
+      //   console.log(fullName);
+
+      //   // I'am a programmer
+      //   let wordOne = "I'am";
+      //   let wordTwo = "a";
+      //   let wordThree = "programmer";
+      //   let fullSentence = wordOne + " " + wordTwo + " " + wordThree;
+      //   console.log(fullSentence);
+
+      // `${varname/expression}`
+      //   let fullSentence = `${wordOne} ${wordTwo} ${wordThree} ${2 + 3}`;
+      //   console.log(fullSentence);
+
+      // Number => positive, negative, decimal
+      //   let age = 23;
+      //   let celcius = -23;
+      //   let weight = 24.5;
+      //   console.log(age, celcius, weight);
+
+      // BigInt
+      //   let bigint = 123456789012345467890n;
+      //   console.log(bigint);
+
+      // Boolean => true/false
+      //   let isAdmin = true;
+      //   //   console.log(isAdmin);
+
+      //   // NaN
+      //   console.log(23 / "Hello");
+
+      //   //   let country = null;
+      //   let country;
+      //   console.log(country);
+
+      // String
+      // Accessing characters
+      // charAt()
+      // []
+      // let name = "John";
+      // J o h n
+      // 0 1 2 3
+      // varName[position]
+      //   console.log(name[2]);
+      //   console.log(name[3]);
+      // varName.charAt(position)
+      //   console.log(name.charAt(2));
+      // console.log(name.length);
+      //   console.log(name.charAt(name.length - 1));
+      //   console.log(name.at(-1));
+      // for (let varName of String)
+      //   for (const char of name) {
+      //     console.log(char); // char = "n"
+      //   }
+
+      // console.log(name.toUpperCase());
+      // console.log(name.toLowerCase());
+
+      // Objects
+      // Syntax
+      /*
+        let varName = {
+            propertyName-1: propertyValue-1,
+            propertyName-2: propertyValue-2,
+                          :
+                          :
+            propertyName-N: propertyValue-N,
+        }
+      */
+      // let userDetails = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 23,
+      //   isAdmin: false,
+      // };
+      // console.log(userDetails);
+      // // Accessing object properties
+      // // dot
+      // // []
+
+      // // dot
+      // // objName.propertyName
+      // console.log(userDetails.firstName);
+
+      // // []
+      // // objName["propertyName"]
+      // console.log(userDetails["age"]);
+
+      // for (const prop in userDetails) {
+      //   console.log(`${prop} : ${userDetails[prop]}`);
+      // }
+
+      // // Adding new prop
+      // // Syntax
+      // // objName.newPropertyName = newPropertyValue
+      // //   userDetails.city = "Chennai";
+      // userDetails["city"] = "Coimbatore";
+      // console.log(userDetails);
+
+      // // Updating existing propertyValue
+      // // Syntax
+      // // objName.existingPropertyName = newPropertyValue
+      // userDetails.age = 34;
+      // console.log(userDetails);
+
+      // // delete
+      // // Syntax
+      // // delete objName.propertName
+      // delete userDetails.city;
+      // console.log(userDetails);
+
+      // Array
+      // Syntax
+      // [ele-1, ele-2, ele-3, ...., ele-N]
+      // index
+      // let subjects = ["English", "Maths", "Physics"];
+      // console.log(subjects);
+      // Access => arrName[index]
+      // console.log(subjects[1]);
+      // console.log(subjects.length);
+      // console.log(subjects[subjects.length - 1]);
+      // console.log(subjects.at(-1));
+    </script>
+  </body>
+</html>

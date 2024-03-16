@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import axios from "axios";
+import baseURL from "../api/api";
 
 const Signup = () => {
   const [user, setUser] = useState({
@@ -36,7 +37,7 @@ const Signup = () => {
       if (password === confirmPassword) {
         // Send to backend
         axios
-          .post("http://localhost:5000/api/v1/users/signup", user)
+          .post(`${baseURL}/users/signup`, user)
           .then((res) => alert(res.data.message))
           .catch((error) => console.log(error));
       } else {

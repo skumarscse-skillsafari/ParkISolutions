@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Functions" />
+    <meta name="Description" content="Description" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h2>Functions</h2>
+
+    <script>
+      // Function
+      // Building block
+      // Function Declaration
+      // Function Expression
+      // Callback
+      // Arrow function
+
+      // Function Declaration
+      // Syntax
+      /*
+      // Function declaration
+        function functionName(para-1, para-2, ..., para-N) {
+          // function block
+        }
+        // Function calling
+        functionName(arg-1, arg-2,..., arg-N)
+      */
+
+      // function displayMessage(name) {
+      //   console.log(`Hello, ${name}`);
+      // }
+      // displayMessage("John");
+      // displayMessage("Jack");
+      // displayMessage("Mary");
+      // displayMessage("Robert");
+
+      // function displayMessage(name) {
+      //   // name = "John"
+
+      //   let message = `Hello, ${name}`;
+      //   return message;
+      // }
+      // let result = displayMessage("John");
+      // console.log(result);
+
+      // Scope
+      // Outer variable and Local variable
+      // Outer variable => can be accessed and modified inside and outside the block
+      // Local variable => can be accessed and modified only inside the block
+      // let firstName = "John";
+      // function displayName() {
+      //   let firstName = "Jack";
+      //   console.log(firstName);
+      // }
+      // firstName = "Robert";
+      // displayName();
+      // console.log(firstName);
+
+      // Function Expression
+      // function displayMessage(message) {
+      //   console.log("Hello ", message);
+      // }
+      // displayMessage("John");
+      /*
+      const varName = function (para-1, para-2,..., para-N) {
+        // block
+      }
+      varName(arg-1, arg-2,..., arg-N)
+      */
+
+      // let displayMessage = function (message) {
+      //   console.log("Hello ", message);
+      // };
+      // displayMessage("John");
+
+      // let displayMessageOne = displayMessage;
+      // displayMessage("Jack");
+      // displayMessageOne("Jack");
+
+      // callback
+      // let callBackFun = function () {
+      //   console.log("CallBack Function");
+      // };
+
+      // function displayMessage(name, age, newFun) {
+      //   // name = "John"
+      //   // age = 23
+      //   // newFun = callBackFun = function () {
+      //   // console.log("CallBack Function");
+      //   // };
+      //   console.log(name);
+      //   console.log(age);
+      //   newFun();
+      // }
+      // displayMessage("John", 23, callBackFun);
+
+      // let square = (num) => console.log(num * num); // 2 * 2 => 4
+
+      // square(2);
+    </script>
+  </body>
+</html>
