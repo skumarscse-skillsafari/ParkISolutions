@@ -3,9 +3,26 @@ const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch("https://fakestoreapi.com/products/1");
+      const data = await response.json();
+      setProduct(data);
+    } catch (error) {
+      setError(true);
+    }
+    setLoading(false);
+  };
   return (
     <div>
       <h1 data-testid="head">Add Product</h1>
+      <span data-testid="productTitle">{product.title}</span>
       <form>
         <p>
           <input
@@ -33,7 +50,20 @@ const AddProduct = () => {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </p>
-        <button disabled={!title || !price || !description}>Add Product</button>
+        <p>
+          <button
+            disabled={!title || !price || !description}
+            onClick={handleSubmit}
+          >
+            {loading ? "Please Wait..." : "Add Product"}
+          </button>
+        </p>
+        <span
+          data-testid="error"
+          style={{ visibility: error ? "visible" : "hidden" }}
+        >
+          Something went wrong
+        </span>
       </form>
     </div>
   );
