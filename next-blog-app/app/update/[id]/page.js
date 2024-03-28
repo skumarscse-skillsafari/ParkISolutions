@@ -1,10 +1,9 @@
 "use client";
 import Form from "@/app/components/Form";
-import { useState } from "react";
-import { useSession } from "next-auth/react";
+import { useState, useEffect } from "react";
+
 import { useRouter } from "next/navigation";
-const CreatePost = () => {
-  const { data: session } = useSession();
+const UpdatePost = ({ params }) => {
   const router = useRouter();
   const [post, setPost] = useState({
     title: "",
@@ -12,22 +11,28 @@ const CreatePost = () => {
     tags: "",
   });
   const [submitting, setSubmitting] = useState(false);
-
-  const createPost = async (e) => {
+  useEffect(() => {
+    async function getPost() {
+      const res = await fetch(`/api/posts/${params.id}`);
+      const data = await res.json();
+      setPost(data);
+    }
+    getPost();
+  }, []);
+  const updatePost = async (e) => {
     e.preventDefault();
     try {
       setSubmitting(true);
-      const response = await fetch("/api/posts/new", {
-        method: "POST",
+      const response = await fetch(`/api/posts/${params.id}`, {
+        method: "PUT",
         body: JSON.stringify({
-          author: session.user.id,
           title: post.title,
           description: post.description,
           tags: post.tags.split(",").map((tag) => tag.trim()),
         }),
       });
       if (response.ok) {
-        alert("Post created successfully");
+        alert("Post updated successfully");
         router.push("/");
       }
     } catch (error) {
@@ -39,14 +44,14 @@ const CreatePost = () => {
   return (
     <div className="container">
       <Form
-        type="Create"
+        type="Update"
         post={post}
         setPost={setPost}
         submitting={submitting}
-        handleSubmit={createPost}
+        handleSubmit={updatePost}
       />
     </div>
   );
 };
 
-export default CreatePost;
+export default UpdatePost;

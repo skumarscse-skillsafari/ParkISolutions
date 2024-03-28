@@ -35,7 +35,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           />
         </p>
         <button type="submit" className="btn btn-primary">
-          {submitting ? "Submitting" : "Create"}
+          {submitting ? "Submitting" : type}
         </button>{" "}
         <Link href="/" className="btn btn-danger">
           Cancel

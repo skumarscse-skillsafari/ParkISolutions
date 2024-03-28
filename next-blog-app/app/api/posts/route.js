@@ -1,11 +1,12 @@
 import Post from "@/app/models/postModel";
+import { connectDB } from "@/app/utils/connectDB";
 
-export const POST = async (req, res) => {
+export const GET = async (req, res) => {
   try {
-    const { author, title, description, tags } = await req.json();
-    await Post.create({ author, title, description, tags });
-    return new Response(JSON.stringify("Post created successfully"), {
-      status: 201,
+    connectDB();
+    const allPosts = await Post.find();
+    return new Response(JSON.stringify(allPosts), {
+      status: 200,
     });
   } catch (error) {
     return new Response("Something went wrong", { status: 500 });
